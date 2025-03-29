@@ -3,6 +3,12 @@ type Query {
     books: [Book]
 }
 
+type Mutation {
+    addBook(name: String, pageCount: Int, authorId: ID): Book
+    updateBook(id: ID, name: String, pageCount: Int, authorId: ID): Book
+    deleteBook(id: ID): Boolean
+}
+
 type Book {
     id: ID
     name: String

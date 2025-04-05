@@ -1,6 +1,8 @@
 type Query {
     bookById(id: ID): Book
     books: [Book]
+    searchBooksByName(name: String): [Book]
+    searchAuthorsByName(name: String): [Author]
 }
 
 type Mutation {
